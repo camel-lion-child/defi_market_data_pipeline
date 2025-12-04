@@ -1,18 +1,52 @@
 # DeFi Market Data Pipeline (TVL + Token Prices)
 
-This project combines **DeFi market knowledge** with **Data Engineering best practices** to build a clean and modular ETL pipeline.  
-The pipeline collects TVL and token price data directly from public APIs (DefiLlama & CoinGecko), transforms them into structured datasets, and prepares them for analysis or downstream modeling.
+---
 
-It is designed to simulate a real-world data workflow used in DeFi analytics, research, and protocol-level financial monitoring.
+Project Highlights
+
+- Built a full ETL pipeline using real DeFi APIs (DefiLlama & CoinGecko)
+
+- Stored raw data in parquet format (industry standard)
+
+- Implemented a transform layer to clean, standardize and merge data
+
+- Performed EDA with rolling averages, correlation and liquidity analysis
+
+- Visualized TVL dynamics across major protocols (Aave, Uniswap, Curve)
 
 ---
 
-**Objectives
+Tech Stack
 
-- Build a **realistic ETL pipeline** using Python.
-- Extract **TVL data** from DefiLlama and **price data** from CoinGecko.
-- Transform and merge both datasets into a unified, analysis-ready format.
-- Structure the repository following **Data Engineering conventions**.
-- Produce clean, reproducible output suitable for **market insights**, **risk analysis**, or **future dashboards**.
+- Python (pandas, requests)
+
+- Jupyter / VS Code
+
+- Git & GitHub
+
+- Parquet storage
+
+- API Engineering
+
+- DeFi Protocol Analysis
 
 ---
+
+[DefiLlama API] → (Extract) → raw parquet  
+[CoinGecko API] → (Extract) → raw parquet  
+        ↓  
+    (Transform) merge/clean  
+        ↓  
+    (EDA Notebook)
+
+---
+
+Future Improvements
+
+- Add per-token price mapping for more precise TVL/price alignment
+
+- Store data in DuckDB for fast querying
+
+- Automate the pipeline with Airflow or Prefect
+
+- Deploy a dashboard using Streamlit
