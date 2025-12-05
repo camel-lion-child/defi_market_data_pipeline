@@ -6,10 +6,7 @@ PROCESSED_DIR = Path("data/processed")
 
 
 def load_latest_file(prefix: str) -> Path:
-    """
-    Lấy file mới nhất bắt đầu bằng prefix trong data/raw/.
-    Ví dụ prefix: 'defi_core_tvl', 'defi_prices'.
-    """
+    
     files = sorted(RAW_DIR.glob(f"{prefix}*.parquet"))
     if not files:
         raise FileNotFoundError(f"No files for prefix {prefix}")
