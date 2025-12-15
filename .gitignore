@@ -1,0 +1,26 @@
+# virtual environments
+venv/
+venv_local_backup/
+
+# python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# notebooks
+.ipynb_checkpoints/
+
+# data
+data/raw/
+data/processed/
+*.parquet
+*.csv
+
+# misc
+.env
+.DS_Store
+.vscode/
+.idea/
+*.log
+*.tmp
