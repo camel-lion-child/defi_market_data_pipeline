@@ -1,10 +1,10 @@
-# DeFi Market Data Pipeline (TVL + Token Prices)
+# DeFi Market Data Pipeline (TVL + BTC/ETH Prices)
 
 ---
 
 Project Highlights
 
-- Built a full ETL pipeline using real DeFi APIs (DefiLlama & CoinGecko)
+- Built a full ETL pipeline using real DeFi APIs (DefiLlama & Binance)
 
 - Stored raw data in parquet format (industry standard)
 
@@ -33,7 +33,7 @@ Tech Stack
 ---
 
 [DefiLlama API] → (Extract) → raw parquet  
-[CoinGecko API] → (Extract) → raw parquet  
+   [Binance]    → (Extract) → raw parquet  
         ↓  
     (Transform) merge/clean  
         ↓  
@@ -42,8 +42,6 @@ Tech Stack
 ---
 
 Future Improvements
-
-- Add per-token price mapping for more precise TVL/price alignment
 
 - Store data in DuckDB for fast querying
 
