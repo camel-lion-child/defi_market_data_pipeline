@@ -14,15 +14,12 @@ def load_latest_file(prefix: str) -> Path:
 
 
 def merge_tvl_prices():
-    # Load TVL file
     tvl_file = load_latest_file("defi_core_tvl")
     tvl_df = pd.read_parquet(tvl_file)
 
-    # Load price file
     price_file = load_latest_file("defi_prices")
     prices_df = pd.read_parquet(price_file)
 
-    # Merge on date
     merged = tvl_df.merge(
         prices_df,
         how="left",
@@ -30,10 +27,8 @@ def merge_tvl_prices():
         right_on="datetime"
     )
 
-    # Drop duplicate columns
     merged = merged.drop(columns=["datetime"], errors="ignore")
 
-    # Save output
     PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
     out_path = PROCESSED_DIR / "merged_tvl_prices.parquet"
     merged.to_parquet(out_path, index=False)
