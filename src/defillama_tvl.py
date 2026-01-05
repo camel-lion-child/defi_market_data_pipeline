@@ -8,9 +8,6 @@ BASE_URL = "https://api.llama.fi"
 
 
 def fetch_protocol_tvl(protocol_slug: str) -> pd.DataFrame:
-    """
-    'aave-v3', 'uniswap-v3', 'curve-dex'.
-    """
     url = f"{BASE_URL}/protocol/{protocol_slug}"
     resp = requests.get(url, timeout=30)
     resp.raise_for_status()
@@ -22,7 +19,6 @@ def fetch_protocol_tvl(protocol_slug: str) -> pd.DataFrame:
         return pd.DataFrame()
 
     df = pd.DataFrame(history)
-    # 'date' là timestamp (seconds)
     df["date"] = pd.to_datetime(df["date"], unit="s")
     df = df.rename(columns={"totalLiquidityUSD": "tvl_usd"})
     df["protocol"] = data.get("name", protocol_slug)
