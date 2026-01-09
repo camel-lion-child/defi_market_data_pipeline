@@ -2,33 +2,33 @@
 
 ---
 
-Project Highlights
+Project Highlights:
 
-- Built a full ETL pipeline using real DeFi APIs (DefiLlama & Binance)
+- Built a full ETL pipeline using real DeFi APIs (DefiLlama & Binance).
 
-- Stored raw data in parquet format (industry standard)
+- Stored raw data in parquet format (industry standard).
 
-- Implemented a transform layer to clean, standardize and merge data
+- Implemented a transform layer to clean, standardize and merge data.
 
-- Performed EDA with rolling averages, correlation and liquidity analysis
+- Performed EDA with rolling averages, correlation and liquidity analysis.
 
-- Visualized TVL dynamics across major protocols (Aave, Uniswap, Curve)
-
+- Visualized TVL dynamics across major protocols (Aave, Uniswap, Curve).
+  
 ---
 
-Tech Stack
+Tech Stack:
 
-- Python (pandas, requests)
+- Python (pandas, requests).
 
-- Jupyter / VS Code
+- Jupyter / VS Code.
 
-- Git & GitHub
+- Git & GitHub.
 
-- Parquet storage
+- Parquet storage.
 
-- API Engineering
+- API Engineering.
 
-- DeFi Protocol Analysis
+- DeFi Protocol Analysis.
 
 ---
 
@@ -41,10 +41,10 @@ Tech Stack
 
 ---
 
-Future Improvements
+Future Improvements:
 
-- Store data in DuckDB for fast querying
+- Store data in DuckDB for fast querying.
 
-- Automate the pipeline with Airflow or Prefect
+- Automate the pipeline with Airflow or Prefect.
 
-- Deploy a dashboard using Streamlit
+- Deploy a dashboard using Streamlit.
