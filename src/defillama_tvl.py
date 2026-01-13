@@ -50,7 +50,6 @@ if __name__ == "__main__":
         print("No data fetched.")
     else:
         big_df = pd.concat(all_df, ignore_index=True)
-        # name = "defi_core"
         path = save_raw(big_df, "defi_core")
         print(f"Saved TVL data to {path}")
         print(big_df.head())
