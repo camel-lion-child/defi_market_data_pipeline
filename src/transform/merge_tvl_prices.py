@@ -1,4 +1,5 @@
-"""I load the latest DeFi TVL (Total Value Locked) and price datasets, merge them on date, and produce a unified dataset for downstream analysis.
+"""I load the latest DeFi TVL (Total Value Locked) and price datasets, merge them on date, 
+and produce a unified dataset for downstream analysis.
 
 Ce script charge les dernières données TVL et de prix DeFi, les fusionne par date, puis génère un dataset unifié pour l’analyse."""
 
